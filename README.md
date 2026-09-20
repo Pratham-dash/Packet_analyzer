@@ -29,8 +29,8 @@ This repository now provides a Python 3 implementation of the DPI packet analyze
 
 ## Requirements
 
-- Python 3.9+
-- No external Python packages required
+- Python 3.12
+- No external Python packages required (see `requirements.txt`)
 
 ## Usage
 
@@ -43,7 +43,7 @@ This repository now provides a Python 3 implementation of the DPI packet analyze
 ### Equivalent direct Python invocation
 
 ```bash
-python3 packet_analyzer.py <input.pcap> <output.pcap> [options]
+python3.12 packet_analyzer.py <input.pcap> <output.pcap> [options]
 ```
 
 ### CLI options
@@ -88,7 +88,7 @@ example.org
 ## Generate sample PCAP
 
 ```bash
-python3 generate_test_pcap.py
+python3.12 generate_test_pcap.py
 ```
 
 This creates `test_dpi.pcap` with TLS SNI, HTTP, DNS, and blocked-IP style traffic.
@@ -98,7 +98,7 @@ This creates `test_dpi.pcap` with TLS SNI, HTTP, DNS, and blocked-IP style traff
 Run:
 
 ```bash
-python3 -m unittest discover -s tests -p 'test_*.py' -v
+python3.12 -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
 Coverage in tests includes:
